@@ -1,9 +1,9 @@
 <h1>Triangle finder</h1>
-#if ($username)
+#if ($username) <!-- Show triangle form if username is set, otherwise show user input form-->
   Welcome $username!
 
   Enter the length and width of a triangle and I will tell you if it's a triangle!</h3>
-
+  <!--Input form for triangle computations-->
   <form action='/triangle' method="post">
     <div class="form-group">
       <label for="length">Length</label>
@@ -22,7 +22,8 @@
 
     <button type="submit" class="btn">Go!</button>
   </form>
-#else
+#else <!--input for username-->
+  $inValidUser
   <form action="/welcome" method="post">
     <label for="username">Your name</label>
     <input id="username" name="username" type="text">
