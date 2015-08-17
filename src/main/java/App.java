@@ -20,6 +20,10 @@ public class App {
     get("/triangle", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
 
+      String inValidUser= "You need a username first!";
+      model.put("inValidUser", inValidUser);
+
+
       model.put("template", "templates/triangle.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
@@ -33,7 +37,6 @@ public class App {
 
       Triangle myTriangle = new Triangle(length, width, height);
       model.put("myTriangle", myTriangle);
-
 
       String inputtedUsername = request.session().attribute("username");
 
