@@ -9,6 +9,36 @@ public class TriangleTest {
     assertEquals(true, testTriangle instanceof Triangle);
   }
 
+  @Test
+  public void ifTriangle_isATriangle_true() {
+    Triangle testTriangle = new Triangle(2, 2, 3);
+    assertEquals(true, testTriangle.isTriangle());
+
+  }
+
+  @Test
+  public void ifTriangle_isEquilateral_true() {
+    Triangle testTriangle = new Triangle(2, 2, 2);
+    assertEquals(true, testTriangle.isEquilateral());
+
+  }
+
+  @Test
+  public void ifTriangle_isScalene_true() {
+    Triangle testTriangle = new Triangle(1, 2, 3);
+    assertEquals(true, testTriangle.isScalene());
+
+  }
+
+  @Test
+  public void ifTriangle_isIsosceles_true() {
+    Triangle testTriangle = new Triangle(3, 3, 4);
+    assertEquals(true, testTriangle.isIsosceles());
+
+  }
+
+
+
   // @Test
   // public void newRectangle_setsLength() {
   //   Rectangle testRectangle = new Rectangle(2, 2);

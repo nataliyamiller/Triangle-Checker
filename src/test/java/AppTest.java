@@ -22,12 +22,12 @@ public class AppTest extends FluentTest {
       goTo("http://localhost:4567/");
       assertThat(pageSource()).contains("Triangle finder");
   }
-//
-//   @Test public void triangleTestIsNotATriangle() {
-//     goTo("http://localhost:4567/");
-//     fill("#length").with("7");
-//     fill("#width").with("5");
-//     fill("#height").with("2");
-//     submit(".btn");
-//     assertThat(pageSource()).contains("Your triangle isn't a triangle!"); }
+
+   @Test public void triangleTestIsNotATriangle() {
+     goTo("http://localhost:4567/");
+     fill("#length").with("7");
+     fill("#width").with("4");
+     fill("#height").with("2");
+     submit(".btn");
+     assertThat(pageSource()).contains("Your Triangle isn't a Triangle!"); }
  }

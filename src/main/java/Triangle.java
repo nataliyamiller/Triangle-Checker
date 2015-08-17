@@ -24,8 +24,19 @@ public class Triangle {
   }
 
   public boolean isTriangle() {
-    return mLength + mHeight < mWidth; //this returns false.
-
-    //return mLength == mWidth;
+    return ((mLength + mHeight > mWidth) && (mLength + mWidth > mHeight) && (mHeight + mWidth > mLength)); //this returns false.
   }
+
+  public boolean isEquilateral() {
+    return ((mLength == mHeight) && (mHeight == mWidth));
+  }
+
+   public boolean isScalene() {
+     return ((mLength != mHeight) && (mHeight != mWidth) && (mLength != mWidth));
+   }
+
+   public boolean isIsosceles() {
+     return((mLength == mWidth) || (mLength == mHeight) || (mWidth == mHeight));
+   }
+
 }

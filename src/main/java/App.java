@@ -17,7 +17,7 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("/rectangle", (request, response) -> {
+    get("/triangle", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
       int length = Integer.parseInt(request.queryParams("length"));
       int width = Integer.parseInt(request.queryParams("width"));

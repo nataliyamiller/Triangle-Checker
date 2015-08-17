@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TriangleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2015-08-17T19:20:02" hostname="epicodus-103.local" time="0.001">
+<testsuite name="TriangleTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2015-08-17T21:06:24" hostname="epicodus-103.local" time="0.004">
   <properties/>
-  <testcase name="newTriangle_instantiatesCorrectly" classname="TriangleTest" time="0.001"/>
+  <testcase name="ifTriangle_isEquilateral_true" classname="TriangleTest" time="0.001"/>
+  <testcase name="newTriangle_instantiatesCorrectly" classname="TriangleTest" time="0.0"/>
+  <testcase name="ifTriangle_isScalene_true" classname="TriangleTest" time="0.0"/>
+  <testcase name="ifTriangle_isATriangle_true" classname="TriangleTest" time="0.0"/>
+  <testcase name="ifTriangle_isIsosceles_true" classname="TriangleTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
