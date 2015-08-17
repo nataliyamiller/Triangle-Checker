@@ -1,6 +1,27 @@
 <h1>Triangle finder</h1>
 #if ($username)
-  Welcome $username
+  Welcome $username!
+
+  Enter the length and width of a triangle and I will tell you if it's a triangle!</h3>
+
+  <form action='/triangle' method="post">
+    <div class="form-group">
+      <label for="length">Length</label>
+      <input id="length" name="length" class="form-control" type="text">
+    </div>
+
+    <div class="form-group">
+      <label for="width">Width</label>
+      <input id="width" name="width" class="form-control" type="text">
+    </div>
+
+      <div class="form-group">
+        <label for="height">Height</label>
+        <input id="height" name="height" class="form-control" type="text">
+      </div>
+
+    <button type="submit" class="btn">Go!</button>
+  </form>
 #else
   <form action="/welcome" method="post">
     <label for="username">Your name</label>

@@ -19,6 +19,14 @@ public class App {
 
     get("/triangle", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
+
+      model.put("template", "templates/triangle.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    post("/triangle", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+
       int length = Integer.parseInt(request.queryParams("length"));
       int width = Integer.parseInt(request.queryParams("width"));
       int height = Integer.parseInt(request.queryParams("height"));
@@ -26,9 +34,15 @@ public class App {
       Triangle myTriangle = new Triangle(length, width, height);
       model.put("myTriangle", myTriangle);
 
+
+      String inputtedUsername = request.session().attribute("username");
+
+      model.put("username", inputtedUsername);
+
       model.put("template", "templates/triangle.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+
 
     post("/welcome", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
@@ -40,6 +54,8 @@ public class App {
       model.put("template", "templates/welcome.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+
+
 
   }
 }
